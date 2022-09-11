@@ -1,0 +1,33 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: #a0a7ab;
+  background-color: #181c23;
+}
+
+a {
+  color: #dd163b;
+  transition: .15s color;
+}
+a:hover {
+  color: #39c;
+}
+
+footer {
+  width: 100%;
+  position: absolute !important;
+  overflow: hidden;
+  color: #eee;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+}
+footer > div a {
+  text-decoration: none;
+}

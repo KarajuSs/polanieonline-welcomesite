@@ -1,0 +1,266 @@
+@import 'animations.css';
+/** Main style settings **/
+@import 'settings-main.css';
+/** Font styles **/
+@import 'settings-font.css';
+/** Other settings **/
+@import 'settings-other.css';
+/** Animate.style **/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+  --gradient-text: linear-gradient(89.97deg, #67f0fa 1.84%, #67f4b9 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #67f0fa -13.86%, #67f4b9 99.55%);
+
+  --main-color: #22a2b1;
+  --bg-color: #292e38;
+  --bg-color-opacity: #292e38ab;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #181C23;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+}
+
+.logo-cont {
+  height: 170px;
+}
+.moving-logo {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  animation: animowane_logo 800ms infinite, animowane_logo2 1s infinite alternate;
+}
+.logo {
+  position: relative;
+  left: -8px;
+  width: 100%;
+  background-size: cover;
+  animation: backInDown 1.2s backwards;
+}
+
+.main {
+  overflow: hidden;
+  min-height: 100vh;
+  transition: .5s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page {
+  position: absolute;
+}
+
+.tales {
+  position: relative;
+  max-width: 700px;
+  display: flex;
+}
+.server-tale {
+  width: 300px;
+  min-height: 600px;
+  background: #ccc;
+}
+
+.server-1,
+.server-2 {
+  cursor: pointer;
+  transition: .5s background-image;
+  will-change: background-image;
+  border-radius: 6px;
+}
+.server-1 {
+  background-image: url('/assets/images/server-1.jpg');
+}
+.server-2 {
+  background-image: url('/assets/images/server-2.jpg');
+}
+.server-2::after {
+  content: 'Work in progress';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 32px;
+  min-width: 330px;
+  transform: rotate(-45deg);
+}
+
+.address {
+  position: initial;
+  background: rgba(30, 30, 30, 0.8);
+  height: 24px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  transition: 1s;
+}
+.server-tale:hover .address {
+  padding-top: 12px;
+  font-size: 20px;
+  height: 60px;
+}
+
+.server-1:hover {
+  background-image: url('/assets/images/server-1-active.jpg');
+}
+.server-2:hover {
+  background-image: url('/assets/images/server-2-active.jpg');
+}
+
+.margin-top-170 {
+  margin-top: 170px;
+}
+.background-text-06 {
+  background: rgba(30, 30, 30, 0.6);
+}
+.background-text-08 {
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.main-text {
+  color: #fff;
+  font-size: 7em;
+  display: flex;
+  justify-content: center;
+  opacity: .5;
+  animation: pulse 2s infinite;
+}
+.main-text:hover {
+  animation: rubberBand 1s ease;
+}
+.secondary-text {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  opacity: .7;
+}
+
+.gradient__bg__linear {
+  /* ff 3.6+ */
+  background:-moz-linear-gradient(0deg, #181C23 0%, #252B36 100%); 
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(0deg, #181C23 0%, #252B36 100%);
+  /* opera 11.10+ */
+  background:-o-linear-gradient(0deg, #181C23 0%, #252B36 100%);
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181C23', endColorstr='#252B36', GradientType=1 );
+  /* ie 10+ */
+  background:-ms-linear-gradient(0deg, #181C23 0%, #252B36 100%);
+  /* global 94%+ browsers support */
+  background:linear-gradient(0deg, #181C23 0%, #252B36 100%);
+}
+
+.box {
+  width: 49%;
+  min-height: 450px;
+  display: block;
+  float: left;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.box:nth-child(1) {
+  animation: backInLeft 2.5s backwards;
+}
+.box:nth-child(2) {
+  max-height: 420px;
+  margin: 40px 0 0 15px;
+  animation: backInRight 2.5s backwards;
+}
+
+.box::after {
+  content: '';
+  clear: both;
+}
+
+.intro {
+  background: var(--bg-color-opacity) !important;
+  border: 1px solid #333946 !important;
+  transition: .5s;
+}
+.intro:hover {
+  background: var(--bg-color) !important;
+  transform: scale(1.02);
+}
+
+.btn-servers {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  color: #ddd !important;
+  font-size: 24px !important;
+  background-color: var(--bg-color-opacity) !important;
+  border: 1px solid #333946 !important;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding-top: 18px !important;
+  transition: .5s !important;
+  animation: backInUp 2.5s backwards;
+}
+
+.btn-servers:hover {
+  color: var(--main-color) !important;
+  background-color: var(--bg-color) !important;
+  transform: scale(1.02);
+}
+
+.arrow {
+  animation: animowane_strzalki 800ms infinite, animowane_strzalki2 2s infinite alternate;
+}
+
+.scaleDown {
+  transform: scale(.85);
+}
+
+/** GoodGames style changes **/
+.nk-image-slider {
+  border-bottom: 3px solid var(--main-color) !important;
+  transition: .5s;
+}
+.nk-image-slider:hover {
+  transform: scale(1.02);
+}
+.nk-copyright-left a {
+  color: var(--main-color) !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    height: 110vh;
+  }
+  .box {
+      position: initial;
+      width: 100%;
+      min-height: 100%;
+  }
+  .box:nth-child(2) {
+      display: block;
+      margin: 0;
+      margin-top: 15px;
+  }
+
+  footer {
+    position: relative !important;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    height: 120vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main {
+    height: 125vh;
+  }
+}

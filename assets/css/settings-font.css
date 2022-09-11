@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'PolskaOnLine';
+  src: url('/assets/fonts/polskaonline.ttf');
+  src:
+    local('PolskaOnLine'),
+    local('PolskaOnLine'),
+    url('/assets/fonts/polskaonline.ttf')
+    format('opentype');
+}
+
+.main {
+  font-family: 'PolskaOnLine', sans-serif;
+}
