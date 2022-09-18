@@ -1,7 +1,7 @@
-var btn = $('#btn');
+var btn = $('.unique-btn');
 
-let main = $('.main');
-let page = $('.page');
+let main = $('.nk-main');
+let feature = $('.feature');
 let tales = $('.tales');
 
 btn.on('click', function(e) {
@@ -9,14 +9,14 @@ btn.on('click', function(e) {
     e.stopPropagation();
 
     setTimeout(function() {
-        page.addClass('animate__animated animate__fadeOutRight');
+        feature.addClass('position-absolute animate__animated animate__fadeOutRight');
         
         tales.removeClass('d-none');
-        tales.addClass('animate__animated animate__backInUp');
+        tales.addClass('animate__animated animate__backInUp animate__delay-1s');
 
         setTimeout(function() {
-            page.addClass('d-none');
-            page.removeClass('animate__animated animate__fadeOutRight');
+            feature.addClass('d-none');
+            feature.removeClass('position-absolute animate__animated animate__fadeOutRight');
             //tales.removeClass('animate__animated animate__backInUp');
             main.removeClass('scaleDown');
         }, 800);
